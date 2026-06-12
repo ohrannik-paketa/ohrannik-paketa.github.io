@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+    <a href="index.html" class="title">Georgii Filonov</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="warship.html" class="active">Project: Warship</a></li>
+        </ul>
+    </nav>
+</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="inner">
+
+        <!-- Header -->
+        <h1 class="major">Warship</h1>
+        <p><em>A retro-style modular arcade shooter built with Python and the Pygame library.</em></p>
+        <span class="image fit"><img src="images/warship-preview.jpg" alt="Warship gameplay screenshot" /></span>
+
+        <!-- The Concept -->
+        <h2>The Concept</h2>
+        <p>
+            Warship is a fast-paced, retro-inspired arcade experience that puts modular gameplay mechanics
+            at its core. Drawing on the visual language of classic 80s shooters, the game challenges players
+            with escalating enemy formations and tight, responsive controls — all driven by a clean, well-structured
+            game loop that keeps every frame crisp and every collision satisfying. The goal was simple: build
+            something that <em>feels</em> like an arcade cabinet in your browser, with none of the jank.
+        </p>
+
+        <!-- Core Features -->
+        <h2>Core Features</h2>
+        <ul>
+            <li>Modular enemy systems with dynamic spawning patterns and scaling difficulty curves.</li>
+            <li>Custom collision detection and lightweight 2D physics for precise, responsive gameplay.</li>
+            <li>Full asset pipeline using Pygame — sprite management, layered rendering, and real-time state tracking.</li>
+        </ul>
+
+        <!-- Technical Implementation -->
+        <h2>Technical Implementation</h2>
+        <p>
+            The entire game is written in Python, leveraging Pygame's event loop as the backbone for
+            all core logic — input handling, entity updates, and rendering. Careful attention was paid
+            to frame rate optimisation: delta-time calculations keep movement consistent across machines,
+            while sprite groups and dirty-rect rendering reduce draw calls during the heaviest on-screen
+            action. Memory is managed through disciplined object pooling for bullets and explosions,
+            preventing garbage collection spikes from breaking the gameplay flow.
+        </p>
+
+        <!-- Action Links -->
+        <ul class="actions">
+            <li><a href="https://github.com/ohrannik-paketa/warship_game" class="button primary">View on GitHub</a></li>
+            <li><a href="index.html" class="button">Back to Home</a></li>
+        </ul>
+
+    </div>
+</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
