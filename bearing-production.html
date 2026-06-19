@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ball Bearing Production Line - Georgii Filonov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Hyperspace</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="warship.html">Project: Warship</a></li>
+                        <li><a href="bearing-production.html" class="active">Project: Production Line</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+
+							<!-- Header -->
+							<h1 class="major">Ball Bearing Production Line</h1>
+							<p>An IIoT simulation modeling a parallelized ball bearing manufacturing process — built with Python, Tkinter, InfluxDB, and Grafana.</p>
+							
+
+							<!-- Project Highlights -->
+							<h2>Project Highlights</h2>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<h3>Product</h3>
+									<p>Industrial ball bearings assembled from four parallel-manufactured components: outer ring, inner ring, steel balls, and cage.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h3>HMI</h3>
+									<p>A dark, industrial-style Tkinter interface with live counters, a scalable pipeline grid, and instant E-Stop / Soft Halt controls.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h3>Monitoring</h3>
+									<p>Production and reject metrics streamed every second to InfluxDB and visualized live in a Grafana SCADA-style dashboard.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h3>Quality Control</h3>
+									<p>Each component and the final assembly pass through dedicated QC stages, with defects logged by station and reason.</p>
+								</div>
+							</div>
+
+							<hr class="major" />
+
+							<!-- HMI Dashboard -->
+							<h2>HMI Dashboard</h2>
+							<p>The operator panel was built with Tkinter following ISA-101 high-performance HMI design principles, using a dark industrial color palette and a fully scalable grid layout. It tracks the background production threads through a thread-safe queue, and exposes two distinct stop behaviors: a <strong>Soft Halt</strong> that lets the current cycle finish, and an <strong>E-Stop</strong> that freezes all machinery instantly via <code>msvcrt</code> hardware-level interrupt detection. Live tiles for units assembled and rejected parts sit alongside a real-time pipeline view and a scrolling fault log.</p>
+							<span class="image fit"><img src="images/hmi-dashboard.png" alt="Tkinter HMI dashboard screenshot" /></span>
+
+							<!-- InfluxDB and Grafana Monitoring -->
+							<h2>InfluxDB and Grafana Monitoring</h2>
+							<p>A dedicated telemetry thread samples the factory's state once per second — shipped totals, reject totals, simulated machine temperature, and current state (Running, Soft Halt, or E-Stop) — and writes it to InfluxDB as a time-series point. Grafana queries this data with Flux to drive a SCADA-style dashboard, including Stat panels for units shipped and total rejects.</p>
+							<span class="image fit"><img src="images/grafana-dashboard.png" alt="Grafana and InfluxDB dashboard screenshot" /></span>
+
+				
+
+							<!-- Technologies -->
+							<h2>Technologies Used</h2>
+							<ul>
+								<li>Python (Object-Oriented, multithreading)</li>
+								<li>Tkinter (HMI / operator panel)</li>
+								<li>InfluxDB (time-series data historian)</li>
+								<li>Grafana (Flux queries, SCADA-style dashboard)</li>
+								<li>Docker &amp; Docker Compose</li>
+								<li>Git &amp; GitHub</li>
+							</ul>
+
+							<!-- What I Learned -->
+							<h2>What I Learned</h2>
+							<p>This project pushed me to design a true parallel manufacturing simulation rather than a sequential one, coordinating multiple threads safely without explicit locks. I learned how to connect live production data to a time-series database and turn it into a real-time monitoring dashboard, while also gaining hands-on experience with Docker-based infrastructure, hardware-level interrupt handling, and the tradeoffs of Python's GIL in a concurrent system.</p>
+
+							<!-- Action Links -->
+							<ul class="actions">
+								<li><a href="https://github.com/ohrannik-paketa/Bearing_Production_Line_AMProj" class="button primary">View Repository</a></li>
+								<li><a href="index.html" class="button">Back to Home</a></li>
+							</ul>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Georgii Filonov. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
